@@ -22,7 +22,12 @@ var app = angular.module('ngTodo',[]);//=ng-app
    $scope.currentTodo=singleTodo;//input will be filled with which has the edit button you click
     $scope.removeTodo(singleTodo);//remove it from list first and you can save it again to add to list after edit
 //var index=$scope.todoList.indexOf(singleTodo);
-//$scope.todoList.splice(position,1,$scope.currentTodo);
+//$scope.todoList.splice(index,1,$scope.currentTodo);
 //$scope.currentTodo='';
+  }
+  $scope.moveUp=function(singleTodo){
+    var index=$scope.todoList.indexOf(singleTodo);
+    $scope.todoList.splice(index,1);
+    $scope.todoList.splice(index-1,0,singleTodo);
   }
 });//get info from input and add to list and clear field

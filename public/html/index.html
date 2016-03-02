@@ -34,6 +34,7 @@ body{
          {{singleTodo}}
          <button type="button" name="button" class="btn btn-info btn-sm pull-right" ng-click='editTodo(singleTodo)'>Edit</button>
          <button class="btn btn-danger btn-sm pull-right" type='button'ng-click='removeTodo(singleTodo)'>X</button>
+         <span class="glyphicon glyphicon-arrow-up pull-right" ng-if='$index!=0'ng-click='moveUp(singleTodo)'></span>
        </li>
      </ul>
    </div>
